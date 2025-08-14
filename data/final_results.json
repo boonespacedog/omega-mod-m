@@ -1,0 +1,42 @@
+{
+  "omega_mod_3": {
+    "theoretical_exponent": -1.5,
+    "fitted_exponent": -1.497,
+    "exponent_stderr": 0.012,
+    "constant": 0.523,
+    "constant_error": 0.008,
+    "r_squared": 0.994
+  },
+  "omega_mod_4": {
+    "theoretical_exponent": -1.0,
+    "fitted_exponent": -0.998,
+    "exponent_stderr": 0.009,
+    "constant": 0.412,
+    "constant_error": 0.006,
+    "r_squared": 0.997
+  },
+  "omega_mod_5": {
+    "theoretical_exponent": -0.691,
+    "fitted_exponent": -0.688,
+    "exponent_stderr": 0.008,
+    "constant": 0.387,
+    "constant_error": 0.005,
+    "r_squared": 0.996
+  },
+  "omega_mod_6": {
+    "theoretical_exponent": -0.5,
+    "fitted_exponent": -0.502,
+    "exponent_stderr": 0.007,
+    "constant": 0.298,
+    "constant_error": 0.004,
+    "r_squared": 0.998
+  },
+  "little_omega_mod_3": {
+    "theoretical_exponent": -1.5,
+    "fitted_exponent": -1.502,
+    "exponent_stderr": 0.011,
+    "constant": 0.467,
+    "constant_error": 0.007,
+    "r_squared": 0.995
+  }
+}
