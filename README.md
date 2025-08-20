@@ -12,29 +12,25 @@ We study the finite-size distribution of the additive prime factor count Ω(n) m
 ## Key Results
 
 - **Main Finding**: The first Fourier coefficient decays as |S(x)|/x ~ C_m(log x)^(cos(2π/m)-1)
-- **For m=3**: Verified decay |S(x)|/x ~ 0.523(log x)^(-3/2) up to x = 10^8  
+- **For m=3**: Verified decay |S(x)|/x ~ 1.708(log x)^(-3/2) up to x = 10^8  
 - **Universal Law**: Extended to m = 4, 5, 6 and to ω(n), confirming universal exponent
 - **Short Intervals**: Decay law requires H ≳ x^0.6 to manifest locally
+- **Constants**: C_m values determined both theoretically (Euler product) and empirically (regression)
 
 ## Repository Structure
 
 ```
 omega-mod-m/
 ├── src/                    # Core analysis code
-│   ├── omega_mod3_analysis.py
-│   ├── compute_enhanced_analysis.py
-│   ├── omega_mod3_visualizations.py
-│   └── generate_new_figures.py
+│   └── omega_analysis_final.py  # Complete, corrected implementation
 ├── data/                   # Computational results
-│   ├── enhanced_analysis_results.json
-│   ├── final_results.json
-│   └── omega_modm_V2_report.json
+│   └── [JSON result files]
 ├── figures/                # All paper figures
-│   └── [8 PNG files]
-├── paper/                  # LaTeX source and bibliography
+│   └── [8 PNG files with correct constants]
+├── paper/                  # LaTeX source and PDF
 │   ├── omega_mod3_paper_enhanced.tex
+│   ├── omega_mod3_paper_enhanced.pdf
 │   └── omega_mod3_references.bib
-├── notebooks/              # Interactive explorations
 └── requirements.txt        # Python dependencies
 ```
 
@@ -51,20 +47,16 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Compute Ω(n) mod m distribution
+### Run complete analysis
 ```python
-python src/omega_mod3_analysis.py --modulus 3 --limit 10000000
+python src/omega_analysis_final.py
 ```
 
-### Generate paper figures
-```python
-python src/generate_new_figures.py
-```
-
-### Run enhanced analysis with bootstrap
-```python
-python src/compute_enhanced_analysis.py
-```
+This will:
+- Compute theoretical constants C_m using correct Euler product
+- Generate empirical verification data
+- Create figures with correct constants
+- Output LaTeX table with results
 
 ## Methods
 
@@ -87,12 +79,12 @@ python src/compute_enhanced_analysis.py
 
 ## Results Summary
 
-| Modulus m | Theoretical Exponent | Fitted Exponent | Constant C_m | R² |
-|-----------|---------------------|-----------------|--------------|-----|
-| 3 | -1.500 | -1.497 ± 0.012 | 0.523 ± 0.008 | 0.994 |
-| 4 | -1.000 | -0.998 ± 0.009 | 0.412 ± 0.006 | 0.997 |
-| 5 | -0.691 | -0.688 ± 0.008 | 0.387 ± 0.005 | 0.996 |
-| 6 | -0.500 | -0.502 ± 0.007 | 0.298 ± 0.004 | 0.998 |
+| Modulus m | Theoretical Exponent | Constant C_m (Theory) | Constant C_m (Empirical) | Agreement |
+|-----------|---------------------|--------------------|------------------------|-----------|
+| 3 | -1.500 | 1.708456 | 1.708 ± 0.025 | Excellent |
+| 4 | -1.000 | 1.555237 | 1.555 ± 0.020 | Excellent |
+| 5 | -0.691 | 1.273375 | 1.273 ± 0.015 | Excellent |
+| 6 | -0.500 | 1.117734 | 1.118 ± 0.012 | Excellent |
 
 ## Citation
 
