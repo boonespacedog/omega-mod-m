@@ -23,10 +23,14 @@
     <meta name="twitter:description" content="Explore finite-size distribution patterns in prime factor counts">
     <meta name="twitter:image" content="https://boonespacedog.github.io/omega-mod-m/figures/omega_decay_unified.png">
     
-    <!-- External Libraries -->
-    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://cdn.plot.ly">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- External Libraries with defer for non-blocking load -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" defer></script>
     
     <style>
         :root {
@@ -69,7 +73,7 @@
             font-size: 3em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeIn 1s ease-in;
+            animation: fadeIn 0.3s ease-in;
         }
 
         .header p {
@@ -135,7 +139,7 @@
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.5s ease-in;
+            animation: fadeIn 0.2s ease-in;
         }
 
         .tab-content.active {
