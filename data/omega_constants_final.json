@@ -1,0 +1,22 @@
+{
+  "theoretical_constants": {
+    "3": {
+      "C_m": 1.7084561164318923,
+      "exponent": -1.4999999999999998
+    },
+    "4": {
+      "C_m": 1.5552371133685374,
+      "exponent": -0.9999999999999999
+    },
+    "5": {
+      "C_m": 1.27337532775032,
+      "exponent": -0.6909830056250525
+    },
+    "6": {
+      "C_m": 1.1177335376056943,
+      "exponent": -0.4999999999999999
+    }
+  },
+  "description": "Correct constants using natural logarithms",
+  "formula": "G_z(1) = prod_p [(1-1/p)^z / (1-z/p)]"
+}
