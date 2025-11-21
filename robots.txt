@@ -1,0 +1,31 @@
+# robots.txt for Prime Factor Distribution Explorer (Omega Mod M)
+# https://boonespacedog.github.io/omega-mod-m/
+
+# Welcome all bots - this is a public educational tool
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://boonespacedog.github.io/omega-mod-m/sitemap.xml
+
+# AI Bots - Welcome! (Educational/Research content)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Interactive tool for number theory research
+# Keywords: omega function, prime factors, modular arithmetic, number theory
