@@ -633,7 +633,7 @@
             plotIds.forEach(id => {
                 const element = document.getElementById(id);
                 if (element) {
-                    Plotly.newPlot(element, [], {}, {responsive: true});
+                    Plotly.newPlot(element, [], {}, {responsive: true, staticPlot: true});
                 }
             });
         }
@@ -814,7 +814,7 @@
                 showlegend: false
             };
             
-            Plotly.newPlot('distributionPlot', [trace], layout, {responsive: true});
+            Plotly.newPlot('distributionPlot', [trace], layout, {responsive: true, staticPlot: true});
         }
 
         // Plot deviation from uniform
@@ -851,7 +851,7 @@
                 showlegend: true
             };
             
-            Plotly.newPlot('deviationPlot', traces, layout, {responsive: true});
+            Plotly.newPlot('deviationPlot', traces, layout, {responsive: true, staticPlot: true});
         }
 
         // Update statistics
@@ -952,7 +952,7 @@
                 showlegend: true
             };
             
-            Plotly.newPlot('theoryPlot', [trace1, trace2], layout, {responsive: true});
+            Plotly.newPlot('theoryPlot', [trace1, trace2], layout, {responsive: true, staticPlot: true});
         }
 
         // Compute character sums
@@ -992,7 +992,7 @@
                 yaxis: {title: 'Re(S(x))'}
             };
             
-            Plotly.newPlot('fourierRealPlot', [traceReal], layoutReal, {responsive: true});
+            Plotly.newPlot('fourierRealPlot', [traceReal], layoutReal, {responsive: true, staticPlot: true});
             
             // Plot imaginary part
             const traceImag = {
@@ -1009,7 +1009,7 @@
                 yaxis: {title: 'Im(S(x))'}
             };
             
-            Plotly.newPlot('fourierImagPlot', [traceImag], layoutImag, {responsive: true});
+            Plotly.newPlot('fourierImagPlot', [traceImag], layoutImag, {responsive: true, staticPlot: true});
         }
 
         // Compute weighted ensemble
@@ -1053,7 +1053,7 @@
                 yaxis: {title: 'Weighted Proportion'}
             };
             
-            Plotly.newPlot('weightedPlot', [trace], layout, {responsive: true});
+            Plotly.newPlot('weightedPlot', [trace], layout, {responsive: true, staticPlot: true});
         }
 
         // Analyze decay function
@@ -1131,7 +1131,7 @@
                 barmode: 'group'
             };
             
-            Plotly.newPlot('comparisonPlot', traces, layout, {responsive: true});
+            Plotly.newPlot('comparisonPlot', traces, layout, {responsive: true, staticPlot: true});
         }
         
         // Generate heatmap
@@ -1184,7 +1184,7 @@
                 yaxis: {title: 'Modulus'}
             };
             
-            Plotly.newPlot('heatmapPlot', [trace], layout, {responsive: true});
+            Plotly.newPlot('heatmapPlot', [trace], layout, {responsive: true, staticPlot: true});
         }
 
         // Export data function
